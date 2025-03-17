@@ -13,12 +13,15 @@ const technologies = [
 
   { name: "MongoDB", icon: "icons/mongodb.svg", category: "Databases" },
   { name: "MySQL", icon: "icons/mysql.svg", category: "Databases" },
+  
+  { name: "Redux", icon: "icons/redux.svg", category: "State Management" },
 
   { name: "Git", icon: "icons/git.png", category: "Tools" },
   { name: "GitHub", icon: "/github.png", category: "Tools" },
   { name: "Postman", icon: "icons/postman.png", category: "Tools" },
   { name: "Firebase", icon: "icons/firebase.png", category: "Tools" },
   { name: "Jest", icon: "icons/jest.png", category: "Tools" }
+
 ];
 
 export default technologies;

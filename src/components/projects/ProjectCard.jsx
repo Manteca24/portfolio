@@ -16,39 +16,51 @@ const ProjectCard = ({
           <img src={image} alt={title} className={Styles.projectImage} />
         )}
       </div>
-      <div className={Styles.RightSide}>
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className={Styles.rightSide}>
+        <div className={Styles.projectInfo}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
 
-        {technologies && technologies.length > 0 && (
-          <div className={Styles.technologies}>
-            <p>
-              <strong>Technologies:</strong> {technologies.join(", ")}
-            </p>
-          </div>
-        )}
+        <div className={Styles.projectTechnologies}>
+          {technologies && technologies.length > 0 && (
+            <div className={Styles.technologies}>
+              {technologies.map((tec, index) => (
+                <div key={index} className={Styles.technology}>
+                  <img
+                    src={tec.image}
+                    alt={tec.name}
+                    title={tec.name} // Tooltip on hover
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
-        {liveDemo && (
-          <a
-            href={liveDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={Styles.demoLink}
-          >
-            Live Demo
-          </a>
-        )}
+        <div className={Styles.iconos}>
+          {liveDemo && (
+            <a
+              href={liveDemo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={Styles.demoLink}
+            >
+              <img src="/descarga.png" alt="descarga" />
+            </a>
+          )}
 
-        {github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={Styles.githubLink}
-          >
-            GitHub
-          </a>
-        )}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={Styles.githubLink}
+            >
+              <img src="/github.png" alt="github" />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

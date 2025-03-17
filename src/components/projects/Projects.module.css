@@ -1,4 +1,3 @@
-
 .projectsGrid {
   display: flex;
   justify-content: center;
@@ -7,25 +6,25 @@
 }
 
 .projectCard {
+  position: relative;
   display: flex;
-  background-color: #121212;
+  justify-content: space-around;
   border-radius: 8px;
-  padding: 30px;
+  padding: 30px 30px 100px 30px;
   width: 100%;
   text-align: center;
   color: #eaeaea;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 14px 10px rgba(0, 0, 0, 0.205);
   transition: all 0.3s ease;
-  margin-bottom: 20px; /* Added margin for spacing between cards */
+  margin-bottom: 20px;
 }
 
-.projectCard:hover {
-  transform: translateY(-10px);
-}
 
 .projectCard h3 {
-  font-size: 24px;
+  font-size: 2rem;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .projectCard p {
@@ -37,16 +36,17 @@
 }
 
 .projectImage {
-  width: 500px;
+  width: 100%; /* Make the image responsive */
   height: auto;
+  max-width: 500px; /* Ensure the image doesn't stretch too wide */
   border-radius: 4px;
-  margin-bottom: 20px; /* Added margin for spacing around the image */
+  margin-bottom: 20px;
 }
 
 .projectCard a {
   display: flex;
   flex-direction: column;
-color: #4caf50;
+  color: #4caf50;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -56,24 +56,86 @@ color: #4caf50;
   color: #eaeaea;
 }
 
+.demoLink img, .githubLink img{
+  width: 30px;
+}
+
+.demoLink img:hover, .githubLink img:hover{
+transform: scale(1.1);}
+
+.iconos{
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  bottom: 15px;
+  left: 15px;
+}
+
+
+.rightSide{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.technologies{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.technology img{
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+}
+
+.technology img:hover{
+transform: scale(1.1);
+}
+
+
+
+
 @media (max-width: 768px) {
   .projects {
     padding: 60px 10px; /* Adjust padding for smaller screens */
   }
 
   .projectsGrid {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* Stack the project cards vertically */
+    gap: 30px; /* Increase gap between stacked cards */
   }
 
-  .projectCard h3 {
-    font-size: 22px; /* Adjust font size for smaller screens */
+  .projectCard {
+    flex-direction: column; /* Stack the image and text vertically */
+    padding: 20px;
+    max-width: 100%; /* Allow the card to take the full width */
   }
+
+  .projectImage {
+    max-width: 100%; /* Ensure the image scales well */
+    margin-bottom: 10px; /* Reduce space between image and text */
+  }
+
 
   .projectCard p {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 13px; /* Adjust font size for smaller screens */
   }
 
   .projectCard a {
     font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .technologies{
+    margin: 30px 0px;
+  }
+
+  .technology img{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+
   }
 }

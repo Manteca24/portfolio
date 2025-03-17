@@ -7,7 +7,7 @@ import Contact from "./components/Contact/Contact";
 import StickyContacts from "./components/StickyContacts/StickyContacts";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import Certifications from "./components/Certifications/Certifications";
+import Certifications from "./components/Certifications/Certifications.jsx";
 import AnimateWrapper from "./components/AnimateWrapper";
 import "./App.css";
 import "./styles/sections.css";

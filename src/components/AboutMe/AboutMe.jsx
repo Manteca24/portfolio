@@ -79,7 +79,7 @@ const AboutMe = () => {
             </p>
             <p>
               Now, I am eager to build impactful projects, solve complex
-              problems, and continue growing as a backend developer. 🚀
+              problems, and continue growing as a full-stack developer. 🚀
             </p>
           </article>
         ) : (
@@ -111,7 +111,7 @@ const AboutMe = () => {
             </p>
             <p>
               Ahora, busco desarrollar proyectos impactantes, resolver problemas
-              complejos y seguir creciendo como backend developer. 🚀
+              complejos y seguir creciendo como full-stack developer. 🚀
             </p>
           </article>
         )}
