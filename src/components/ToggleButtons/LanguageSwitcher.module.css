@@ -1,0 +1,81 @@
+.languageSwitcher {
+display: flex;  }
+  
+  .dropdownContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .selectedFlag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .flag {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    background-color: #121212;
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .languageOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .languageOption:hover {
+    background-color: #4caf50;
+    color: #121212;
+    border-radius: 5px;
+  }
+  
+  .languageSwitcher .dropdown {
+    opacity: 1; /* Show the dropdown */
+  }
+  
+  .languageOption img {
+    width: 20px;
+    height: auto;
+  }
+  
+  .languageSwitcher .selectedFlag .flag {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Active flag enlargement */
+  .languageSwitcher .selectedFlag .flag:hover {
+    transform: scale(1.1);
+  }
+
+  .arrow{
+    width: 20px;
+  }
+
+  .arrow:hover{
+    transform: translateY(2px);
+  }
+  

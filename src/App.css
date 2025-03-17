@@ -1,0 +1,36 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right:100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+    animation: bounce 1.5s infinite; 
+    cursor: pointer;
+  }
+  
+  .scroll-to-top-img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .scroll-to-top:hover .scroll-to-top-img {
+    transform: scale(1.1);
+  }
+  
+
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px); /* Adjust the bounce height */
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}

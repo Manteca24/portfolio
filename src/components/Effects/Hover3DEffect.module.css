@@ -1,0 +1,21 @@
+.container {
+  perspective: 1000px; /* Adds depth to the scene */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.element {
+  background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+  position: relative;
+  will-change: transform;
+}
+

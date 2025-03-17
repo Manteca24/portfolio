@@ -1,0 +1,237 @@
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1501;
+  background-color: #121212;
+}
+
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  gap: 50px;
+}
+
+/* General navigation styles */
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  list-style: none;
+}
+
+.nav li {
+  position: relative;
+}
+
+/* Prevent shifting by scaling only the span inside */
+.nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects for navigation links */
+.nav li a:hover {
+  transform: scale(1.1);
+  color: #4caf50;
+}
+
+
+
+/* Add styles for scaling effect and tooltip */
+.downloadLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adjust spacing between icon and text */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.downloadLink img {
+  width: 40px;  /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+}
+
+
+/* Hover effect for scaling */
+.downloadLink:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip style */
+.tooltip {
+  font-size: 13px;
+  font-weight: 300;
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -90%; /* Position it under the icon */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.downloadLink:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 151;
+}
+
+.bar {
+  width: 30px;
+  height: 5px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Change the hamburger icon when clicked */
+.open {
+  transform: rotate(45deg);
+}
+
+.open:nth-child(2) {
+  opacity: 0;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+
+/* Profile section - Hidden by default */
+.profile {
+  z-index: 1001;
+  position: fixed;
+  gap: 10px;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Show when scrolling past 500px */
+.profile.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.profileName {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile menu - hide or show */
+@media (max-width: 1200px) {
+  /* Ensure hamburger is visible on top */
+  .hamburger {
+    display: flex;
+  }
+
+  .navBar{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #121212ea;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 150; 
+  }
+
+  .nav.openNav {
+    transform: translateX(0); /* Slide in the sidebar */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+  }
+  
+  /* .nav li {
+    background-color: #121212; 
+    border: 1px solid #4caf50;
+  } */
+  
+  .nav li a {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+    width: 100px;
+    text-align: left;
+  }
+
+  .profile{
+    display: none;
+  }
+
+  .tooltip{
+    bottom: 30%; /* Position it under the icon */
+    left: 110%;  }
+
+}
+
+

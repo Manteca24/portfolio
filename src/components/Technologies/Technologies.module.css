@@ -1,0 +1,64 @@
+.technologiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.categoryGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.categoryTitle {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #69a06f;
+  margin-bottom: 10px;
+}
+
+.technologiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.technologieItem {
+  display: flex;
+  flex-direction: row; /* Icons and text aligned in a row */
+  align-items: center;
+  justify-content: center;
+  max-width: 150px; /* Adjusted size to fit icon + name */
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.technologieItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.technologieIcon {
+  max-width: 70px; /* Slightly smaller icon size */
+  height: 30px;
+  margin-right: 10px; /* Space between icon and name */
+}
+
+.technologieItem p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.technologieCategory {
+  font-size: 10px;
+  color: #777;
+  margin-top: 5px;
+  font-style: italic;
+}

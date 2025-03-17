@@ -1,0 +1,158 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  height: 80vh;
+  text-align: center;
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  margin-bottom: 150px;
+}
+
+/* Center content on smaller screens */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive text */
+.greeting {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.name {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 300;
+  color: #4caf50;
+}
+
+/* Responsive profile picture */
+.profilePic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+/* Responsive arrow */
+.arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0% {
+      transform: translateX(-50%) translateY(0);
+  }
+  50% {
+      transform: translateX(-50%) translateY(10px);
+  }
+  100% {
+      transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .home {
+      flex-direction: column; /* Stack items */
+      height: auto;
+      text-align: center;
+  }
+
+  .profilePic {
+      width: 220px;
+      height: 220px;
+  }
+
+  .greeting {
+      font-size: 35px;
+  }
+
+  .name {
+      font-size: 50px;
+  }
+
+  .subtitle {
+      font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+      gap: 30px;
+      padding-top: 50px;
+  }
+
+  .profilePic {
+      width: 200px;
+      height: 200px;
+  }
+
+  .greeting {
+      font-size: 30px;
+  }
+
+  .name {
+      font-size: 40px;
+  }
+
+  .subtitle {
+      font-size: 22px;
+  }
+
+  .arrow {
+      width: 60px;
+      bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+      padding: 30px 10px;
+      gap: 20px;
+  }
+
+  .profilePic {
+      width: 180px;
+      height: 180px;
+  }
+
+  .greeting {
+      font-size: 28px;
+  }
+
+  .name {
+      font-size: 35px;
+  }
+
+  .subtitle {
+      font-size: 20px;
+  }
+
+  .arrow {
+      width: 50px;
+      bottom: 20px;
+      margin-top: 50px;
+  }
+}
