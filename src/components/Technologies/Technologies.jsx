@@ -8,13 +8,14 @@ const Technologies = () => {
   const { language } = useLanguage();
 
   // Grouping technologies by category
-  const groupedTechnologies = technologies.reduce((acc, tech) => {
-    if (!acc[tech.category]) {
-      acc[tech.category] = [];
-    }
-    acc[tech.category].push(tech);
-    return acc;
-  }, {});
+  const groupedTechnologies = technologies.reduce(
+    (acc, { category, ...rest }) => {
+      if (!acc[category]) acc[category] = [];
+      acc[category].push(rest);
+      return acc;
+    },
+    {}
+  );
 
   return (
     <section id="technologies" className="section">
@@ -24,18 +25,18 @@ const Technologies = () => {
       </div>
 
       <div className={Styles.technologiesContainer}>
-        {Object.keys(groupedTechnologies).map((category) => (
+        {Object.entries(groupedTechnologies).map(([category, techs]) => (
           <div key={category} className={Styles.categoryGroup}>
             <h3 className={Styles.categoryTitle}>{category}</h3>
             <div className={Styles.technologiesList}>
-              {groupedTechnologies[category].map((tech, index) => (
+              {techs.map(({ name, icon }, index) => (
                 <div key={index} className={Styles.technologieItem}>
                   <img
-                    src={tech.icon}
-                    alt={tech.name}
+                    src={icon}
+                    alt={name}
                     className={Styles.technologieIcon}
                   />
-                  <p>{tech.name}</p>
+                  <p>{name}</p>
                 </div>
               ))}
             </div>

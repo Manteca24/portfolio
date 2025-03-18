@@ -45,11 +45,13 @@ const NavBar = () => {
       <div className={Styles.navBar}>
         {/* Profile Section (Appears after scrolling down) */}
         <div className={`${Styles.profile} ${showProfile ? Styles.show : ""}`}>
-          <img
-            src="/favicon.ico"
-            alt="Agostina Zavia Martínez"
-            className={Styles.profilePic}
-          />
+          <a href="#home">
+            <img
+              src="/favicon2.png"
+              alt="Agostina Zavia Martínez"
+              className={Styles.profilePic}
+            />
+          </a>
           <span className={Styles.profileName}>Agostina Zavia Martínez</span>
         </div>
 

@@ -8,7 +8,7 @@
 .projectCard {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 8px;
   padding: 30px 30px 100px 30px;
   width: 100%;
@@ -17,6 +17,16 @@
   box-shadow: 10px 14px 10px rgba(0, 0, 0, 0.205);
   transition: all 0.3s ease;
   margin-bottom: 20px;
+}
+
+.LeftSide, .rightSide{
+  width: 50%;
+}
+
+.LeftSide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -99,33 +109,41 @@ transform: scale(1.1);
 
 
 @media (max-width: 768px) {
-  .projects {
-    padding: 60px 10px; /* Adjust padding for smaller screens */
-  }
-
-  .projectsGrid {
-    flex-direction: column; /* Stack the project cards vertically */
-    gap: 30px; /* Increase gap between stacked cards */
+  .projects{
+    padding: 0px;
   }
 
   .projectCard {
-    flex-direction: column; /* Stack the image and text vertically */
-    padding: 20px;
-    max-width: 100%; /* Allow the card to take the full width */
+    width: 80vw;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .rightSide{
+    width: 90vw;
+    text-align: center;
+    text-align: justify;
+  }
+
+  .projectCard h3{
+    text-align: center;
   }
 
   .projectImage {
-    max-width: 100%; /* Ensure the image scales well */
-    margin-bottom: 10px; /* Reduce space between image and text */
+    width: 90vw; 
+    margin-bottom: 10px; 
   }
 
 
   .projectCard p {
-    font-size: 13px; /* Adjust font size for smaller screens */
+    width: 90vw;
+    font-size: 13px; 
   }
 
   .projectCard a {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px; 
   }
 
   .technologies{
@@ -134,7 +152,8 @@ transform: scale(1.1);
 
   .technology img{
     width: 30px;
-    height: 30px;
+    height: auto;
+    max-height: 30px;
     padding: 2px;
 
   }

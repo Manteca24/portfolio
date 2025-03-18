@@ -1,64 +1,86 @@
 .technologiesContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .categoryGroup {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
 }
 
 .categoryTitle {
-  align-self: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #69a06f;
-  margin-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.categoryTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #69a06f;
+  margin: 5px auto 0;
+  border-radius: 2px;
 }
 
 .technologiesList {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
 }
 
 .technologieItem {
   display: flex;
-  flex-direction: row; /* Icons and text aligned in a row */
   align-items: center;
   justify-content: center;
-  max-width: 150px; /* Adjusted size to fit icon + name */
-  padding: 10px;
-  border-radius: 8px;
+  max-width: 180px;
+  padding: 12px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: #121212;
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
 }
 
 .technologieItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(26, 26, 26, 1);
 }
 
 .technologieIcon {
-  max-width: 70px; /* Slightly smaller icon size */
-  height: 30px;
-  margin-right: 10px; /* Space between icon and name */
+  width: 60px;
+  height: auto;
+  max-height: 60px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+}
+
+.technologieItem:hover .technologieIcon {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .technologieItem p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
   color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .technologieCategory {
-  font-size: 10px;
-  color: #777;
+  font-size: 12px;
+  color: #aaa;
   margin-top: 5px;
   font-style: italic;
 }

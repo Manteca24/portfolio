@@ -1,50 +1,218 @@
 .contact {
-    background-color: #121212;
-    padding: 100px 20px;
+  background-color: #121212;
+  color: #eaeaea;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactContainer {
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.contactTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+position: relative;
+width: 100%;
+}
+
+.contactTitle p {
+  position:absolute;
+  left: 36%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #69a06f;
+  margin: 0;
+}
+
+.animatedText {
+  position: absolute;
+  left: 40%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+
+.lineContainer {
+  position: absolute;
+  left: 40%;}
+
+.line {
+  margin-top: 20px;
+  width: 200px;
+}
+
+/* Slide-up animation (appears from the bottom) */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+
+
+.inputGroup {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #eaeaea;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #121212;
+  color: #eaeaea;
+  border: 1px solid #69a06f;
+  border-radius: 5px;
+}
+
+.inputGroup textarea {
+  min-height: 150px;
+}
+
+.button {
+  padding: 12px 30px;
+  background-color: #69a06f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.button:disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  background-color: #4caf50;
+}
+
+.status {
+  color: #eaeaea;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .contactContainer {
+    width: 90%;
+  }
+
+  .contactTitle p {
+    font-size: 1.8rem;
+  }
+
+  .animatedText {
+    font-size: 2rem;
+    left: 75px;
+  }
+
+  .lineContainer {
+    left: 180px;
+  }
+
+  .line {
+    width: 150px;
+  }
+
+  .contactForm {
+    margin: 80px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactTitle {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contactTitle p {
+    position: static;
+    font-size: 1.5rem;
+  }
+
+  .animatedText {
+    position: static;
+    font-size: 1.8rem;
     text-align: center;
   }
-  
-  .contact h2 {
-    font-size: 36px;
-    color: #eaeaea;
-    margin-bottom: 40px;
+
+  .lineContainer {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
   }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .inputGroup {
+    width: 80%;
   }
-  
-  .contact form div {
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 400px;
+
+  .line {
+    width: 120px;
   }
-  
-  .contact input,
-  .contact textarea {
-    width: 100%;
+
+  .contactForm {
+    margin: 50px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactContainer {
+    width: 95%;
+  }
+
+  .contactTitle p {
+    font-size: 1.3rem;
+  }
+
+  .animatedText {
+    font-size: 1.5rem;
+  }
+
+  .line {
+    width: 100px;
+  }
+
+  .contactForm {
+    margin: 30px;
     padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background-color: #1a1a1a;
-    color: #eaeaea;
   }
-  
-  .contact button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+
+
+  .button {
+    font-size: 1rem;
+    padding: 10px 25px;
   }
-  
-  .contact button:hover {
-    background-color: #69a06f;
-  }
-  
+}

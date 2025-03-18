@@ -64,11 +64,16 @@
 
     }
 
+
+
+    .sectionBlack{
+      padding: 0px;
+    }
+
     .sectionTitle h2 {
       margin-top: 50px;
     }
   }
-
 
 
 

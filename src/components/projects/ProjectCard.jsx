@@ -12,9 +12,11 @@ const ProjectCard = ({
   return (
     <div className={Styles.projectCard}>
       <div className={Styles.LeftSide}>
-        {image && (
-          <img src={image} alt={title} className={Styles.projectImage} />
-        )}
+        <a href={liveDemo} target="_blank" rel="noopener noreferrer">
+          {image && (
+            <img src={image} alt={title} className={Styles.projectImage} />
+          )}
+        </a>
       </div>
       <div className={Styles.rightSide}>
         <div className={Styles.projectInfo}>
