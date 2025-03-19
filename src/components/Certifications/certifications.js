@@ -27,7 +27,7 @@ const certifications = [
         "I gained knowledge in web development, both in frontend and backend. The course covered key technologies such as HTML, CSS, JavaScript, React, Node.js, Express, and databases like MongoDB. I learned to build full web applications, from designing the user interface to implementing server-side functionalities. Additionally, I trained in using version control tools like Git and in implementing RESTful APIs. This bootcamp provided me with a solid foundation in modern application development, preparing me to work as a full stack developer.",
       descriptionSpanish:
         "Adquirí conocimientos en desarrollo web tanto en el frontend como en el backend. El curso cubrió tecnologías clave como HTML, CSS, JavaScript, React, Node.js, Express y bases de datos como MongoDB. Aprendí a crear aplicaciones web completas, desde el diseño de la interfaz de usuario hasta la implementación de funcionalidades en el servidor. Además, me entrené en el uso de herramientas de control de versiones como Git y en la implementación de APIs RESTful. Este bootcamp me proporcionó una sólida base en el desarrollo de aplicaciones modernas, preparándome para trabajar como desarrollador full stack.",
-      link: "https://formacion.thebridge.tech/es_on_esp_fs/?kw=curso%20desarrollo%20web&cpn=20981412239&utm_medium=ppc&utm_source=adwords&utm_campaign=ADSM_ONLINE_FULL-STACK_GOOGLE_CONV_SEARCH_TestRoas&utm_term=curso%20desarrollo%20web&hsa_kw=curso%20desarrollo%20web&hsa_net=adwords&hsa_ver=3&hsa_cam=20981412239&hsa_ad=693366185505&hsa_acc=1272778203&hsa_src=g&hsa_grp=158338807396&hsa_mt=b&hsa_tgt=kwd-114462654&gad_source=1&gclid=Cj0KCQjwytS-BhCKARIsAMGJyzqG7HbYLgespSbIktdLY8hCrrYe8LvV8k7Jr6EYJHYm2YVe8CDv8OgaAvpbEALw_wcB",
+      link: "/FullStackTheBridge.pdf",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ const certifications = [
         "Introduction to ABAP, the programming language used in SAP systems. I learned how to develop reports, handle data processing, and create interfaces in SAP. The program also focused on understanding the SAP environment, customizing reports, and performing basic modifications. This certification strengthened my programming skills within SAP ERP systems and gave me the ability to write code for automation and data handling within SAP modules.",
       descriptionSpanish:
         "Introducción al ABAP, el lenguaje de programación utilizado en los sistemas SAP. Aprendí a desarrollar informes, manejar el procesamiento de datos y crear interfaces en SAP. El programa también se centró en comprender el entorno SAP, personalizar informes y realizar modificaciones básicas. Esta certificación fortaleció mis habilidades de programación dentro de los sistemas ERP de SAP, dándome la capacidad de escribir código para automatización y manejo de datos dentro de los módulos de SAP.",
-      link: "https://academy.logaligroup.com/mod/simplecertificate/view.php?id=2100&action=get",
+      link: "/SAP_ABAP.pdf",
     },
   ];
   
