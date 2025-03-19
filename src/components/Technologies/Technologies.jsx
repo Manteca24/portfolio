@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Styles from "./Technologies.module.css";
 import { useLanguage } from "../../contexts/LanguageContext";
 import "../../styles/sections.css";
@@ -8,14 +8,12 @@ const Technologies = () => {
   const { language } = useLanguage();
 
   // Grouping technologies by category
-  const groupedTechnologies = technologies.reduce(
-    (acc, { category, ...rest }) => {
-      if (!acc[category]) acc[category] = [];
-      acc[category].push(rest);
-      return acc;
-    },
-    {}
-  );
+  const groupedTechnologies = technologies.reduce((acc, tech) => {
+    const key = language === "en" ? tech.category : tech.categoryEs; // Switch based on language
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(tech);
+    return acc;
+  }, {});
 
   return (
     <section id="technologies" className="section">

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styles from "./StickyContacts.module.css";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const StickyContacts = () => {
   const [copied, setCopied] = useState(false);
+  const { language } = useLanguage();
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("agozavia@gmail.com");
@@ -21,13 +23,23 @@ const StickyContacts = () => {
         >
           <img src="/mail.png" alt="Mail" className={styles.icon} />
         </a>
-        <a
-          href="https://www.linkedin.com/in/agozavia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/linkedin.png" alt="LinkedIn" className={styles.icon} />
-        </a>
+        {language === "en" ? (
+          <a
+            href="https://www.linkedin.com/in/agozavia/?locale=en_US"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/linkedin.png" alt="LinkedIn" className={styles.icon} />
+          </a>
+        ) : (
+          <a
+            href="https://www.linkedin.com/in/agozavia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/linkedin.png" alt="LinkedIn" className={styles.icon} />
+          </a>
+        )}
         <a
           href="https://github.com/manteca24"
           target="_blank"
@@ -43,7 +55,11 @@ const StickyContacts = () => {
         <span className={styles.email} onClick={handleCopyEmail}>
           ago@zavia.es
         </span>
-        {copied && <span className={styles.copiedMessage}>Copied!</span>}
+        {copied && (
+          <span className={styles.copiedMessage}>
+            {language === "en" ? "Copied!" : "Copiado!"}
+          </span>
+        )}
         <div className={styles.verticalLine}></div>
       </div>
     </div>
