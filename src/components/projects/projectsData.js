@@ -81,7 +81,7 @@ const projects = [
     technologies: [
       { name: "JavaScript", image: "/icons/javascript.png" },
       { name: "CSS3", image: "/icons/css3.png" },
-      { name: "HTML", image: "/icons/html.png" },
+      { name: "HTML", image: "/icons/html5.png" },
     ],
     image: "/projects/PagesVisit/screenshot.png",
     liveDemo: "https://manteca24.github.io/pagesvisit/",
