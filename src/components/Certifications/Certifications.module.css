@@ -15,7 +15,8 @@
 
 .certificate {
   width: 150px;
-  height: 100%;
+  height: 90%;
+
   overflow: hidden;
   transition: width 0.4s ease-in-out;
   border-radius: 10px;
@@ -35,7 +36,6 @@
 }
 
 .certificate:hover img {
-  transform: scale(1.05);
   filter: blur(0);
 }
 
@@ -59,8 +59,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-right: 15px;
   font-size: 16px;
   line-height: 1.5;
+}
+.descriptionWrapper .description p{
+  text-align: justify;
 }
 
 .visible {
@@ -156,7 +160,7 @@
   .heroContainer {
     flex-direction: column;
     height: auto;
-    margin: 0;
+    width: 90vw;
   }
 
   .certificationsWrapper {

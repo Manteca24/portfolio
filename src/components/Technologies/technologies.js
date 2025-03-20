@@ -20,7 +20,9 @@ const technologies = [
   { name: "GitHub", icon: "/github.png", category: "Tools", categoryEs: "Herramientas" },
   { name: "Postman", icon: "icons/postman.png", category: "Tools", categoryEs: "Herramientas" },
   { name: "Firebase", icon: "icons/firebase.png", category: "Tools", categoryEs: "Herramientas" },
-  { name: "Jest", icon: "icons/jest.png", category: "Tools", categoryEs: "Herramientas" }
+  { name: "Jest", icon: "icons/jest.png", category: "Tools", categoryEs: "Herramientas" },
+  { name: "Swagger", icon: "icons/swagger.png", category: "Tools", categoryEs: "Herramientas" }
+
 ];
 
 export default technologies;

@@ -18,7 +18,7 @@ const Projects = () => {
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
-            title={project.title}
+            title={project.title[language]}
             description={project.description[language]}
             technologies={project.technologies}
             image={project.image}
