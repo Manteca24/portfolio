@@ -38,6 +38,26 @@ const projects = [
   },
   {
     id: 3,
+    title: {en:"Animal Quiz",es:"Reto Animal",},
+    description: {
+      en: "An educational game app where users can test their knowledge about animals. The app includes a variety of categories like insects, mammals, reptiles, and birds. Users can answer questions, track their scores, and learn fun facts about different animals. The app is built with Node.js, Express, MongoDB, React, and Vite, and the API is built with my own backend.",
+      es: "Una app educativa de trivia donde los usuarios pueden poner a prueba su conocimiento sobre animales. La app incluye diversas categorías como insectos, mamíferos, reptiles y aves. Los usuarios pueden responder preguntas, hacer un seguimiento de sus puntuaciones y aprender datos curiosos sobre diferentes animales. El proyecto está construido con Node.js, Express, MongoDB, React y Vite. La API ha sido desarrollada con mi propio backend.",
+    },
+    technologies: [
+      { name: "Node.js", image: "/icons/nodejs.svg" },
+      { name: "Express", image: "/icons/express.png" },
+      { name: "MongoDB", image: "/icons/mongodb.svg" },
+      { name: "React", image: "/icons/react.svg" },
+      { name: "Vite", image: "/icons/vite.svg" },
+      { name: "CSS3", image: "/icons/css3.png" },
+
+    ],
+    image: "/projects/AnimalQuiz/screenshot.png",
+    liveDemo: "https://retoanimal.netlify.app/",
+    github: "https://github.com/Manteca24/animal-trivia-app",
+  },
+  {
+    id: 4,
     title: {en:"Online Clothing Store",es:"Tienda de Ropa",},
     description: {
       en: "An online clothing store that allows users to browse and filter products. Users can sign up and log in with Firebase authentication, while administrators can add, edit, and delete products from the catalog. The project is built with Node.js, Express, and MongoDB.",
@@ -57,7 +77,7 @@ const projects = [
     github: "https://github.com/Manteca24/backend-project-break",
   },
   {
-    id: 4,
+    id: 5,
     title: {en:"Boom",es:"Boom",},
     description: {
       en: "A fun game where you try to guess a random number between 1 and 3 while a countdown of 5 seconds ticks down. If you guess correctly, you save the world! If not, the bomb explodes. The game also fetches a gif from an API to show you the outcome.",
@@ -72,7 +92,7 @@ const projects = [
     github: "https://github.com/Manteca24/boom",
   },
   {
-    id: 5,
+    id: 6,
     title: {en:"Page-Visits project",es:"Proyecto número de visitas",},
     description: {
       en: "Sometimes I just want to have fun with JS. I built visit counter app that tracks the number of times users visit your page. It uses localStorage to persist the count across sessions. You can reset the counter with a button, and it will show a GIF based on the outcome of the visit count.",
